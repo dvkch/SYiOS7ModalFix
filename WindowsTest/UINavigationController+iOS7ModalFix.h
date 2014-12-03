@@ -1,5 +1,5 @@
 //
-//  View.h
+//  UINavigationController+iOS7ModalFix.h
 //  WindowsTest
 //
 //  Created by rominet on 03/12/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface View : UIView
-
-@property (nonatomic, assign) BOOL overrideFrame;
+@interface UINavigationController (iOS7ModalFix)
 
 @end

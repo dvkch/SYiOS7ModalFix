@@ -10,10 +10,11 @@
 		E07E299E16191112E5FE79DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 035A8E1F7FA80EFAE3A0AFA7 /* libPods.a */; };
 		F8746B141A2E9F1F001C7C10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8746B131A2E9F1F001C7C10 /* main.m */; };
 		F8746B171A2E9F1F001C7C10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8746B161A2E9F1F001C7C10 /* AppDelegate.m */; };
-		F8746B1A1A2E9F1F001C7C10 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8746B191A2E9F1F001C7C10 /* ViewController.m */; };
 		F8746B1F1A2E9F1F001C7C10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8746B1E1A2E9F1F001C7C10 /* Images.xcassets */; };
 		F8746B381A2E9FAE001C7C10 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8746B371A2E9FAE001C7C10 /* Default-568h@2x.png */; };
-		F8AB05AD1A2EAA0300242CE6 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AB05AC1A2EAA0300242CE6 /* View.m */; };
+		F8AB05B31A2EBA0C00242CE6 /* UIView+iOS7ModalFix.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AB05B21A2EBA0C00242CE6 /* UIView+iOS7ModalFix.m */; };
+		F8AB05B61A2EBD1100242CE6 /* UIViewController+iOS7ModalFix.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AB05B51A2EBD1100242CE6 /* UIViewController+iOS7ModalFix.m */; };
+		F8AB05B91A2EBECE00242CE6 /* UINavigationController+iOS7ModalFix.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AB05B81A2EBECE00242CE6 /* UINavigationController+iOS7ModalFix.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,12 +26,14 @@
 		F8746B131A2E9F1F001C7C10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8746B151A2E9F1F001C7C10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F8746B161A2E9F1F001C7C10 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F8746B181A2E9F1F001C7C10 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F8746B191A2E9F1F001C7C10 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F8746B1E1A2E9F1F001C7C10 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F8746B371A2E9FAE001C7C10 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F8AB05AB1A2EAA0300242CE6 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
-		F8AB05AC1A2EAA0300242CE6 /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
+		F8AB05B11A2EBA0C00242CE6 /* UIView+iOS7ModalFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+iOS7ModalFix.h"; sourceTree = "<group>"; };
+		F8AB05B21A2EBA0C00242CE6 /* UIView+iOS7ModalFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+iOS7ModalFix.m"; sourceTree = "<group>"; };
+		F8AB05B41A2EBD1100242CE6 /* UIViewController+iOS7ModalFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+iOS7ModalFix.h"; sourceTree = "<group>"; };
+		F8AB05B51A2EBD1100242CE6 /* UIViewController+iOS7ModalFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+iOS7ModalFix.m"; sourceTree = "<group>"; };
+		F8AB05B71A2EBECE00242CE6 /* UINavigationController+iOS7ModalFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+iOS7ModalFix.h"; sourceTree = "<group>"; };
+		F8AB05B81A2EBECE00242CE6 /* UINavigationController+iOS7ModalFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+iOS7ModalFix.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,12 +89,14 @@
 			children = (
 				F8746B151A2E9F1F001C7C10 /* AppDelegate.h */,
 				F8746B161A2E9F1F001C7C10 /* AppDelegate.m */,
-				F8746B181A2E9F1F001C7C10 /* ViewController.h */,
-				F8746B191A2E9F1F001C7C10 /* ViewController.m */,
-				F8AB05AB1A2EAA0300242CE6 /* View.h */,
-				F8AB05AC1A2EAA0300242CE6 /* View.m */,
 				F8746B1E1A2E9F1F001C7C10 /* Images.xcassets */,
 				F8746B111A2E9F1F001C7C10 /* Supporting Files */,
+				F8AB05B11A2EBA0C00242CE6 /* UIView+iOS7ModalFix.h */,
+				F8AB05B21A2EBA0C00242CE6 /* UIView+iOS7ModalFix.m */,
+				F8AB05B41A2EBD1100242CE6 /* UIViewController+iOS7ModalFix.h */,
+				F8AB05B51A2EBD1100242CE6 /* UIViewController+iOS7ModalFix.m */,
+				F8AB05B71A2EBECE00242CE6 /* UINavigationController+iOS7ModalFix.h */,
+				F8AB05B81A2EBECE00242CE6 /* UINavigationController+iOS7ModalFix.m */,
 			);
 			path = WindowsTest;
 			sourceTree = "<group>";
@@ -209,8 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8AB05AD1A2EAA0300242CE6 /* View.m in Sources */,
-				F8746B1A1A2E9F1F001C7C10 /* ViewController.m in Sources */,
+				F8AB05B91A2EBECE00242CE6 /* UINavigationController+iOS7ModalFix.m in Sources */,
+				F8AB05B61A2EBD1100242CE6 /* UIViewController+iOS7ModalFix.m in Sources */,
+				F8AB05B31A2EBA0C00242CE6 /* UIView+iOS7ModalFix.m in Sources */,
 				F8746B171A2E9F1F001C7C10 /* AppDelegate.m in Sources */,
 				F8746B141A2E9F1F001C7C10 /* main.m in Sources */,
 			);
