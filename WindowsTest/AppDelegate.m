@@ -23,10 +23,11 @@
     f.size.height   -= 50;
     
     self.window = [[UIWindow alloc] initWithFrame:f];
-    [self.window setBackgroundColor:[UIColor whiteColor]];
-    [self.window.layer setMasksToBounds:YES];
+    //    [self.window setBackgroundColor:[UIColor whiteColor]];
+    [self.window.layer setMasksToBounds:NO];
     [self.window.layer setOpaque:NO];
     [self.window setRootViewController:[ViewController new]];
+    self.window.rootViewController.view.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
     UIViewController *vc = [UIViewController new];
@@ -45,6 +46,9 @@
         [self.window.rootViewController presentViewController:self.modal animated:YES completion:^{
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [self.window.rootViewController dismissViewControllerAnimated:YES completion:^{
+                    NSLog(@"window y: %f", self.window.frame.origin.y);
+                    NSLog(@"rootview y: %f", self.window.rootViewController.view.frame.origin.y);
+                    
                     [self toyAround];
                 }];
             });
