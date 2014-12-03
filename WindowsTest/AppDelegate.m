@@ -33,7 +33,7 @@
     UIViewController *vc = [UIViewController new];
     vc.view.backgroundColor = [UIColor redColor];
     
-    self.modal = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.modal = vc;
     
     [self toyAround];
     
