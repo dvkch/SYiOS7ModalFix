@@ -44,6 +44,10 @@
 {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.window.rootViewController presentViewController:self.modal animated:YES completion:^{
+            CGRect f = self.modal.view.frame;
+            f.origin.y = 0;
+            self.modal.view.frame = f;
+            
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [self.window.rootViewController dismissViewControllerAnimated:YES completion:^{
                     CGRect f = self.window.rootViewController.view.frame;
