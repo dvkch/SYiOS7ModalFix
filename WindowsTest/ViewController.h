@@ -8,8 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    Fix_None,
+    Fix_KVO_New,
+    Fix_KVO_Old,
+    Fix_DidAppear,
+    Fix_View_SubClass,
+} Fix;
+
 @interface ViewController : UIViewController
 
+@property (nonatomic, assign) Fix fix;
+
+- (id)initWithFix:(Fix)fix;
 
 @end
 

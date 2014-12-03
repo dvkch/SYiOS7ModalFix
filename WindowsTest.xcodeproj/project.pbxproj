@@ -13,6 +13,7 @@
 		F8746B1A1A2E9F1F001C7C10 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8746B191A2E9F1F001C7C10 /* ViewController.m */; };
 		F8746B1F1A2E9F1F001C7C10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8746B1E1A2E9F1F001C7C10 /* Images.xcassets */; };
 		F8746B381A2E9FAE001C7C10 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8746B371A2E9FAE001C7C10 /* Default-568h@2x.png */; };
+		F8AB05AD1A2EAA0300242CE6 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AB05AC1A2EAA0300242CE6 /* View.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		F8746B191A2E9F1F001C7C10 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F8746B1E1A2E9F1F001C7C10 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F8746B371A2E9FAE001C7C10 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F8AB05AB1A2EAA0300242CE6 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
+		F8AB05AC1A2EAA0300242CE6 /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				F8746B161A2E9F1F001C7C10 /* AppDelegate.m */,
 				F8746B181A2E9F1F001C7C10 /* ViewController.h */,
 				F8746B191A2E9F1F001C7C10 /* ViewController.m */,
+				F8AB05AB1A2EAA0300242CE6 /* View.h */,
+				F8AB05AC1A2EAA0300242CE6 /* View.m */,
 				F8746B1E1A2E9F1F001C7C10 /* Images.xcassets */,
 				F8746B111A2E9F1F001C7C10 /* Supporting Files */,
 			);
@@ -204,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8AB05AD1A2EAA0300242CE6 /* View.m in Sources */,
 				F8746B1A1A2E9F1F001C7C10 /* ViewController.m in Sources */,
 				F8746B171A2E9F1F001C7C10 /* AppDelegate.m in Sources */,
 				F8746B141A2E9F1F001C7C10 /* main.m in Sources */,

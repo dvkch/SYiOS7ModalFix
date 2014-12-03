@@ -22,34 +22,49 @@
     f.origin.y      += 50;
     f.size.height   -= 50;
     
+#warning DEFINE FIX HERE
+    Fix fix = Fix_View_SubClass;
+    
+    // KVO_New       : breaks animations
+    // KVO_Old       : works but i don't have the slightest idea why
+    // DidAppear     : works but the view bumps
+    // View_SubClass : works nicely, i know why, but maybe be a bit harder to use as a solution if we use things like UITableViewController
+    
     self.window = [[UIWindow alloc] initWithFrame:f];
-    //    [self.window setBackgroundColor:[UIColor whiteColor]];
     [self.window.layer setMasksToBounds:NO];
     [self.window.layer setOpaque:NO];
-    [self.window setRootViewController:[ViewController new]];
+    [self.window setRootViewController:[[ViewController alloc] initWithFix:fix]];
     self.window.rootViewController.view.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    UIViewController *vc = [UIViewController new];
+    ViewController *vc = [[ViewController alloc] initWithFix:fix];
     vc.view.backgroundColor = [UIColor redColor];
+    self.modal = vc;
     
-    self.modal = [[UINavigationController alloc] initWithRootViewController:vc];
-    
-    [self toyAround];
+    [self toyAround:NO];
     
     return YES;
 }
 
-- (void)toyAround
+- (void)toyAround:(BOOL)log
 {
+    if(log)
+    {
+        NSLog(@"window y: %f", self.window.frame.origin.y);
+        NSLog(@"rootview y: %f", self.window.rootViewController.view.frame.origin.y);
+    }
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.window.rootViewController presentViewController:self.modal animated:YES completion:^{
+            if(log)
+            {
+                NSLog(@"window y: %f", self.window.frame.origin.y);
+                NSLog(@"rootview y: %f", self.window.rootViewController.view.frame.origin.y);
+            }
+            
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [self.window.rootViewController dismissViewControllerAnimated:YES completion:^{
-                    NSLog(@"window y: %f", self.window.frame.origin.y);
-                    NSLog(@"rootview y: %f", self.window.rootViewController.view.frame.origin.y);
-                    
-                    [self toyAround];
+                    [self toyAround:log];
                 }];
             });
         }];
