@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name     = 'SYiOS7ModalFix'
   s.version  = '1.0'
   s.license  = 'Custom'
-  s.summary  = 'Fixes this nasty modal view wrong positioning on iOS7'
+  s.summary  = 'Fix for iOS7 modal views and status bar height changes'
   s.homepage = 'https://github.com/dvkch/SYiOS7ModalFix'
   s.author   = { 'Stan Chevallier' => 'contact@stanislaschevallier.fr' }
   s.source   = { :git => 'https://github.com/dvkch/SYiOS7ModalFix.git' }
